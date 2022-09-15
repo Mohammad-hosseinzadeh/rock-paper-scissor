@@ -55,20 +55,27 @@ function game(userChoice) {
             break;
     }
 }
+// conver letter to word
+function convertToWord(letter) {
+    if (letter === "r") {
+        return "سنگ";
+    } else if (letter === "p") {
+        return "کاغذ";
+    }
+    return "قیچی";
+}
 
 // if user won
-function win(userChoice,compChoice){
+function win(userChoice, compChoice) {
     userScore++;
-    userscore_span.innerHTML=userScore;
-    compscore_span.innerHTML=compScore;
+    userscore_span.innerHTML = userScore;
+    compscore_span.innerHTML = compScore;
 }
 // if user lose
-function lose(userChoice,compChoice){
+function lose(userChoice, compChoice) {
     compScore++;
-    userscore_span.innerHTML=userScore;
-    compscore_span.innerHTML=compScore;
+    userscore_span.innerHTML = userScore;
+    compscore_span.innerHTML = compScore;
 }
 // if draw
-function draw(userChoice,compChoice){
-    
-}
+function draw(userChoice, compChoice) {}
