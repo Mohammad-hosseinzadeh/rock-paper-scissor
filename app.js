@@ -8,3 +8,16 @@ const userscore_span = document.querySelector("#user-score");
 const compscore_span = document.querySelector("#comp-score");
 const result_p = document.querySelector(".result p");
 
+// eventListeners
+eventListeners();
+function eventListeners() {
+    rock_div.addEventListener("click", () => {
+        game("r");
+    });
+    paper_div.addEventListener("click", () => {
+        game("p");
+    });
+    scissors_div.addEventListener("click", () => {
+        game("s");
+    });
+}
