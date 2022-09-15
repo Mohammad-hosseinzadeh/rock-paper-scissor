@@ -70,12 +70,16 @@ function win(userChoice, compChoice) {
     userScore++;
     userscore_span.innerHTML = userScore;
     compscore_span.innerHTML = compScore;
+    result_p.innerHTML = `شما برنده شدید !!! شما ${convertToWord(userChoice)} و کامپیوتر ${convertToWord(compChoice)} را انتخاب کرد .`;
 }
 // if user lose
 function lose(userChoice, compChoice) {
     compScore++;
     userscore_span.innerHTML = userScore;
     compscore_span.innerHTML = compScore;
+    result_p.innerHTML = `شما باختید !!! شما ${convertToWord(userChoice)} و کامپیوتر ${convertToWord(compChoice)} را انتخاب کرد .`;
 }
 // if draw
-function draw(userChoice, compChoice) {}
+function draw(userChoice, compChoice) {
+    result_p.innerHTML = `  بازی مساوی شد !!! شما ${convertToWord(userChoice)} و کامپیوتر ${convertToWord(compChoice)} را انتخاب کرد .`;
+}
