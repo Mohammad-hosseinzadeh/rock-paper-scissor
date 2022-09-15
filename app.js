@@ -34,7 +34,6 @@ function getCompChoice() {
 // get userChoice and computerChoice and compare them
 function game(userChoice) {
     const compChoice = getCompChoice();
-    console.log(userChoice + compChoice);
     switch (userChoice + compChoice) {
         case "rs":
         case "sp":
@@ -71,6 +70,12 @@ function win(userChoice, compChoice) {
     userscore_span.innerHTML = userScore;
     compscore_span.innerHTML = compScore;
     result_p.innerHTML = `شما برنده شدید !!! شما ${convertToWord(userChoice)} و کامپیوتر ${convertToWord(compChoice)} را انتخاب کرد .`;
+    // add grenn class
+    document.getElementById(userChoice).classList.add("green");
+    // remove green class after 500ms
+    setTimeout(() => {
+        document.getElementById(userChoice).classList.remove("green");
+    }, 500);
 }
 // if user lose
 function lose(userChoice, compChoice) {
@@ -78,8 +83,20 @@ function lose(userChoice, compChoice) {
     userscore_span.innerHTML = userScore;
     compscore_span.innerHTML = compScore;
     result_p.innerHTML = `شما باختید !!! شما ${convertToWord(userChoice)} و کامپیوتر ${convertToWord(compChoice)} را انتخاب کرد .`;
+    // add red class
+    document.getElementById(userChoice).classList.add("red");
+    // remove red class after 500ms
+    setTimeout(() => {
+        document.getElementById(userChoice).classList.remove("red");
+    }, 500);
 }
 // if draw
 function draw(userChoice, compChoice) {
     result_p.innerHTML = `  بازی مساوی شد !!! شما ${convertToWord(userChoice)} و کامپیوتر ${convertToWord(compChoice)} را انتخاب کرد .`;
+    // add gray class
+    document.getElementById(userChoice).classList.add("gray");
+    // remove gray class after 500ms
+    setTimeout(() => {
+        document.getElementById(userChoice).classList.remove("gray");
+    }, 500);
 }
