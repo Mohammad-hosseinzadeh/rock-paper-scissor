@@ -21,3 +21,17 @@ function eventListeners() {
         game("s");
     });
 }
+
+// functions
+
+// get computer choice
+function getCompChoice(){
+    const choices=["r","p","s"]
+    const randomChoice=Math.floor(Math.random()*3)
+    return choices[randomChoice];
+}
+
+// get userChoice and computerChoice and compare them
+function game(userChoice){
+
+}
