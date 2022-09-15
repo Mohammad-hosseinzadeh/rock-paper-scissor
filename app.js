@@ -25,13 +25,50 @@ function eventListeners() {
 // functions
 
 // get computer choice
-function getCompChoice(){
-    const choices=["r","p","s"]
-    const randomChoice=Math.floor(Math.random()*3)
+function getCompChoice() {
+    const choices = ["r", "p", "s"];
+    const randomChoice = Math.floor(Math.random() * 3);
     return choices[randomChoice];
 }
 
 // get userChoice and computerChoice and compare them
-function game(userChoice){
+function game(userChoice) {
+    const compChoice = getCompChoice();
+    console.log(userChoice + compChoice);
+    switch (userChoice + compChoice) {
+        case "rs":
+        case "sp":
+        case "pr":
+            win(userChoice, compChoice);
+            break;
+        case "rp":
+        case "sr":
+        case "ps":
+            lose(userChoice, compChoice);
+            break;
+        case "rr":
+        case "ss":
+        case "pp":
+            draw(userChoice, compChoice);
+            break;
+        default:
+            break;
+    }
+}
 
+// if user won
+function win(userChoice,compChoice){
+    userScore++;
+    userscore_span.innerHTML=userScore;
+    compscore_span.innerHTML=compScore;
+}
+// if user lose
+function lose(userChoice,compChoice){
+    compScore++;
+    userscore_span.innerHTML=userScore;
+    compscore_span.innerHTML=compScore;
+}
+// if draw
+function draw(userChoice,compChoice){
+    
 }
