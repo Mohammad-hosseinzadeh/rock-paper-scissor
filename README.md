@@ -1,4 +1,4 @@
-# rock-paper-scissors-persianversion
+# rock-paper-scissor-persianversion
 game Rock, paper, scissors in Persian between user and computer
 
 # HTML  CSS  JS
